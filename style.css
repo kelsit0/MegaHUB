@@ -1,0 +1,189 @@
+
+body {
+    font-family: 'Montserrat';
+  }
+  
+#nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgb(24, 24, 24); 
+    color: white;
+    border-radius: 5px;
+}
+
+#nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+    
+    font-family: 'Montserrat';
+}
+
+#nav button:hover {
+    color: rgb(252, 98, 193);
+    transform: scale(1.1);
+}
+
+/* Para alinear los botones a la derecha en conjunto */
+#nav .nav-buttons {
+    display: flex;
+}
+
+#h1{
+    font-size: 1rem;
+}
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* separa las cards entre sí */
+    justify-content: center;
+    padding: 20px;
+}
+
+  .card {
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255,255,255,0.1); 
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.card button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 1rem;
+    padding: 8px 16px;
+    margin: 8px 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat';
+}
+
+.card button:hover {
+    background-color: rgb(252, 98, 193);
+    color: black;
+    transform: scale(1.05);
+    border-color: rgb(252, 98, 193);
+}
+
+
+
+.detalle-body {
+
+    background-color: rgb(51, 48, 48);
+    color: white;
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.detalle-container {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.1);
+}
+
+.detalle-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.volver-button {
+    display: inline-block;
+    margin-top: 20px;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.volver-button:hover {
+    background-color: rgb(252, 98, 193);
+    color: black;
+    border-color: rgb(252, 98, 193);
+}
+
+
+
+.login-body {
+    background-color: rgb(51, 48, 48);
+    color: white;
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+}
+
+.login-container button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.login-container button:hover {
+    background-color: rgb(252, 98, 193);
+    color: black;
+    border-color: rgb(252, 98, 193);
+}
+
+.error-msg {
+    color: rgb(252, 98, 193);
+    font-size: 0.9rem;
+    margin-top: 10px;
+}

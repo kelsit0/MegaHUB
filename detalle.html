@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+<body class="detalle-body">
+    <div class="detalle-container">
+        <img id="imagen" class="detalle-img" src="" alt="Imagen del contenido">
+        <h1 id="titulo"></h1>
+        <p id="descripcion"></p>
+        <a href="index.html" class="volver-button">← Volver</a>
+    </div>
+
+    <script>
+        const data = JSON.parse(localStorage.getItem('detalleContenido'));
+        document.getElementById('titulo').textContent = data.titulo;
+        document.getElementById('descripcion').textContent = data.descripcion;
+        document.getElementById('imagen').src = data.imagen;
+    </script>
+</body>
+</html>

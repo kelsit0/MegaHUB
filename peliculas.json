@@ -1,0 +1,18 @@
+[
+    {
+      "titulo": "Interestellar",
+      "ruta_imagen": "assets/interestellar.webp",
+      "descripcion": "Viaje espacial para salvar la Tierra"
+    },
+    {
+      "titulo": "Dark",
+      "ruta_imagen": "assets/dark.webp",
+      "descripcion": "Viajes en el tiempo y misterio"
+    },
+    {
+      "titulo": "godzilla",
+      "ruta_imagen": "assets/otra.webp",
+      "descripcion": "Lagarto maniako a la orden pal desorden"
+    }
+  ]
+  
