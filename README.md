@@ -11,7 +11,7 @@ El mas mejor proyecto NO COPIA de plataformas de entretenimiento, en donde se de
 
 ## 📸 Vista del menu
 
-![MegaHUB](img/menu.png)
+![MegaHUB](assets/menu.png)
 
 
 ## ⚙️ Tecnologías empleadas
