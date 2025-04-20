@@ -1,0 +1,31 @@
+#nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgb(24, 24, 24); 
+    color: white;
+    border-radius: 5px;
+}
+
+#nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+    
+    font-family: 'Montserrat';
+}
+
+#nav button:hover {
+    color: rgb(252, 98, 193);
+    transform: scale(1.1);
+}
+
+/* Para alinear los botones a la derecha en conjunto */
+#nav .nav-buttons {
+    display: flex;
+}

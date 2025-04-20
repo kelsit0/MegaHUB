@@ -1,0 +1,27 @@
+[
+    {
+      "titulo": "Interestellar",
+      "ruta_imagen": "interestellar.webp",
+      "descripcion": "Viaje espacial para salvar la Tierra",
+      "tipo": "pelicula"
+    },
+    {
+      "titulo": "Dark",
+      "ruta_imagen": "dark.webp",
+      "descripcion": "Viajes en el tiempo y misterio",
+      "tipo": "serie"
+    },
+    {
+      "titulo": "Godzilla",
+      "ruta_imagen": "gozilla.webp",
+      "descripcion": "Lagarto maniako a la orden pal desorden",
+      "tipo": "pelicula"
+    },
+    {
+      "titulo": "Stranger Things",
+      "ruta_imagen": "gozilla.webp",
+      "descripcion": "Misterios en Hawkins sjkdhjsksdkhc aj acjha sdljbscdj ascj ajch sdahj",
+      "tipo": "serie"
+    }
+  ]
+  
