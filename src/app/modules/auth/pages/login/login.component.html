@@ -1,0 +1,13 @@
+<div class="login-body">
+    <div class="login-wrapper">
+      <h1 class="main-title">Mega-Hub</h1>
+      <div class="login-card">
+        <h2 class="login-title">Iniciar Sesión(admin/1234)</h2>
+        <input type="text" [(ngModel)]="username" placeholder="Usuario" />
+        <input type="password" [(ngModel)]="password" placeholder="Contraseña" />
+        <button (click)="login()">Ingresar</button>
+        <p class="error-msg" *ngIf="errorMsg">{{ errorMsg }}</p>
+      </div>
+    </div>
+  </div>
+  

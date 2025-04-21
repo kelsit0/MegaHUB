@@ -3,13 +3,15 @@ import { NavBarComponent } from '../../../../shared/components/nav-bar/nav-bar.c
 import { ContentListComponent } from '../../../../shared/components/content-list/content-list.component';
 import dataRaw from '../../../../data/movies.json';
 import { ContentModel } from '../../../../core/models/content.model';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
   imports: [
-    NavBarComponent,  // ya lo tenías
-    ContentListComponent // <-- AGREGALO ACÁ
+    NavBarComponent,  
+    ContentListComponent,
+    RouterOutlet
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'

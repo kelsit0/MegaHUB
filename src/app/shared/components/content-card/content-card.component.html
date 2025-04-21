@@ -1,6 +1,10 @@
 <div class="content-card">
-    <img [src]="content.ruta_imagen" [alt]="content.titulo" />
-    <h3>{{ content.titulo }}</h3>
-    <p>{{ content.descripcion }}</p>
+  <img class="card-img" [src]="content.ruta_imagen" [alt]="content.titulo" />
+  <h3>{{ content.titulo }}</h3>
+  <p>{{ content.descripcion }}</p>
+
+  <div class="card-buttons">
+    <button (click)="verDetalles()">Ver más</button>
+    <button (click)="guardarContenido()">Guardar</button>
   </div>
-  
+</div>

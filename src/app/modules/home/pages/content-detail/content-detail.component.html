@@ -1,0 +1,10 @@
+<div class="detalle-body" *ngIf="content">
+    <div class="detalle-container">
+      <h2>{{ content.titulo }}</h2>
+      <img class="detalle-img" [src]="content.ruta_imagen" alt="{{ content.titulo }}" />
+      <p>{{ content.descripcion }}</p>
+  
+      <a class="volver-button" (click)="volver()">Volver al inicio</a>
+    </div>
+  </div>
+  
