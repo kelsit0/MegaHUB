@@ -7,6 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
+  ///para manejar estados de las series, peliculas etc etc
   @Output() tipoSeleccionado = new EventEmitter<'pelicula' | 'serie'>();
 
   seleccionar(tipo: 'pelicula' | 'serie') {

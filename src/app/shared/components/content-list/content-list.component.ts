@@ -11,5 +11,6 @@ import { ContentCardComponent } from '../content-card/content-card.component';
   styleUrl: './content-list.component.scss'
 })
 export class ContentListComponent {
+  ///para recibir la lista
   @Input() contents: ContentModel[] = [];
 }
