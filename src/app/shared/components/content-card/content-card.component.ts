@@ -20,7 +20,7 @@ export class ContentCardComponent {
   }
 
   verDetalles():void {
-    ///enviamos el titulo 
+    ///enviamos el titulo encodeado a la ruta de detalle
     const title = encodeURIComponent(this.content.titulo)
     this.router.navigate(['detail/',title]);
   }

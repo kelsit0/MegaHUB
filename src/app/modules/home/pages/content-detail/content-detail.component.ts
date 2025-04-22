@@ -33,7 +33,7 @@ export class ContentDetailComponent implements OnInit{
     this.content= this.allContent.find(content=> content.titulo===title);
     console.log(this.content)
   }
-
+  ///regresar a home
   volver():void{
     this.backRoute.navigate(['home'])
   }
