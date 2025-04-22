@@ -30,7 +30,7 @@ git clone https://github.com/tu-usuario/megahub.git
 ```
 2. Ingresa a la carpeta del proyecto:
 ```
-cd  ProyectoHub
+cd  MegaHub
 ```
 
 3. Instala las dependencias:
