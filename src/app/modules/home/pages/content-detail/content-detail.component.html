@@ -1,4 +1,5 @@
-<div class="detalle-body" *ngIf="content">
+@if (content) {
+  <div class="detalle-body">
     <div class="detalle-container">
       <h2>{{ content.titulo }}</h2>
       <img class="detalle-img" [src]="content.ruta_imagen" alt="{{ content.titulo }}" />
@@ -7,4 +8,5 @@
       <a class="volver-button" (click)="volver()">Volver al inicio</a>
     </div>
   </div>
+}
   

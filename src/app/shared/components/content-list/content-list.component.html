@@ -1,7 +1,9 @@
+
 <div class="content-list">
-    <app-content-card
-      *ngFor="let content of contents"
-      [content]="content"
-    ></app-content-card>
+  @for (contenido of contents; track $index) {
+    <app-content-card [content]="contenido"></app-content-card>
+  }@empty {
+    <h1>Añade contenido como favorito, y accede a el desde aca!</h1>
+  }
   </div>
-  
+  <!-- Pendiente añadir @For -->

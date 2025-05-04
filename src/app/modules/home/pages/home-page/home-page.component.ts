@@ -23,7 +23,6 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.allContents = dataRaw as ContentModel[];
-    console.log(this.allContents)
     this.filtrarContenido();
   }
 

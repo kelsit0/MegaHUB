@@ -14,5 +14,11 @@ export const routes: Routes = [
    {
       path:'detail/:title',
       loadComponent:() => import('./modules/home/pages/content-detail/content-detail.component').then(m=>m.ContentDetailComponent)
+   },
+   {
+      path:'favorites',
+      loadComponent:()=>import('./modules/home/pages/favorites-page/favorites-page.component').then(m => m.FavoritesPageComponent)
+         
+     
    }
 ];

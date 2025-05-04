@@ -1,27 +1,74 @@
 [
-    {
-      "titulo": "Interestellar",
-      "ruta_imagen": "interestellar.webp",
-      "descripcion": "Viaje espacial para salvar la Tierra",
-      "tipo": "pelicula"
-    },
-    {
-      "titulo": "Dark",
-      "ruta_imagen": "dark.webp",
-      "descripcion": "Viajes en el tiempo y misterio",
-      "tipo": "serie"
-    },
-    {
-      "titulo": "Godzilla",
-      "ruta_imagen": "gozilla.webp",
-      "descripcion": "Lagarto maniako a la orden pal desorden",
-      "tipo": "pelicula"
-    },
-    {
-      "titulo": "Stranger Things",
-      "ruta_imagen": "gozilla.webp",
-      "descripcion": "Misterios en Hawkins",
-      "tipo": "serie"
-    }
-  ]
-  
+  {
+    "titulo": "Interestellar",
+    "ruta_imagen": "interestellar.webp",
+    "descripcion": "Viaje espacial para salvar la Tierra",
+    "tipo": "pelicula"
+  },
+  {
+    "titulo": "Dark",
+    "ruta_imagen": "dark.webp",
+    "descripcion": "Viajes en el tiempo y misterio",
+    "tipo": "serie"
+  },
+  {
+    "titulo": "Godzilla",
+    "ruta_imagen": "gozilla.webp",
+    "descripcion": "Lagarto maniako a la orden pal desorden",
+    "tipo": "pelicula"
+  },
+  {
+    "titulo": "Stranger Things",
+    "ruta_imagen": "strangerthings.webp",
+    "descripcion": "Misterios en Hawkins",
+    "tipo": "serie"
+  },
+  {
+    "titulo": "The Batman",
+    "ruta_imagen": "batman.webp",
+    "descripcion": "Un nuevo caballero oscuro se enfrenta a Enigma en Gotham",
+    "tipo": "pelicula"
+  },
+  {
+    "titulo": "Breaking Bad",
+    "ruta_imagen": "breakingbad.webp",
+    "descripcion": "Profesor de química se vuelve narcotraficante",
+    "tipo": "serie"
+  },
+  {
+    "titulo": "Avatar: El Camino del Agua",
+    "ruta_imagen": "avatar2.webp",
+    "descripcion": "Los Na'vi exploran nuevos territorios y enfrentan amenazas humanas",
+    "tipo": "pelicula"
+  },
+  {
+    "titulo": "The Witcher",
+    "ruta_imagen": "witcher.webp",
+    "descripcion": "Cazador de monstruos en un mundo lleno de magia y guerra",
+    "tipo": "serie"
+  },
+  {
+    "titulo": "El Irlandés",
+    "ruta_imagen": "irishman.webp",
+    "descripcion": "Un asesino a sueldo recuerda su pasado en la mafia",
+    "tipo": "pelicula"
+  },
+  {
+    "titulo": "La Casa de Papel",
+    "ruta_imagen": "lacasadepapel.webp",
+    "descripcion": "Un grupo de ladrones planea el atraco perfecto en la Fábrica de Moneda",
+    "tipo": "serie"
+  },
+  {
+    "titulo": "Oppenheimer",
+    "ruta_imagen": "oppenheimer.webp",
+    "descripcion": "La historia detrás del desarrollo de la bomba atómica",
+    "tipo": "pelicula"
+  },
+  {
+    "titulo": "The Mandalorian",
+    "ruta_imagen": "mandalorian.webp",
+    "descripcion": "Un cazarrecompensas en el universo de Star Wars cuida a Grogu",
+    "tipo": "serie"
+  }
+]

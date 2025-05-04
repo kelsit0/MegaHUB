@@ -1,0 +1,25 @@
+h1{
+    align-items: center;
+    justify-items: center;
+}
+
+
+.volver-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #1e1e1e;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+  }
+  
+  .volver-button:hover {
+    background-color: rgb(252, 98, 193);
+    color: black;
+    border-color: rgb(252, 98, 193);
+  }
+  
