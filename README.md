@@ -1,48 +1,46 @@
 # 🎬 MegaHUB
 
-Bienvenido a **MegaHUB**, el mejor proyecto de plataforma de entretenimiento 100% original (NO copia 😎).Pensada como una plataforma tipo streaming, donde podrás explorar contenido multimedia como **películas**, **series**, marcar favoritos y próximamente configurar tu perfil.
+Bienvenido a **MegaHUB**, el mejor proyecto de plataforma de entretenimiento 100% original (NO copia 😎). Pensada como una plataforma tipo streaming, donde podrás explorar contenido multimedia como **películas**, **series**, marcar favoritos y, próximamente, configurar tu perfil.
 
-Durante el desarrollo se incorporan buenas prácticas (si todo sale bien 🙏), modularización del código, componentes reutilizables, y arquitectura escalable en Angular 18.
+Durante el desarrollo se incorporan buenas prácticas (si todo sale bien 🙏), modularización del código, componentes reutilizables y arquitectura escalable en Angular 18.
 
 ---
 
-## 🚀 Sprint 3 - Pruebas y Code Coverage(QA)
+## 🚀 Sprint 3 - Pruebas y Code Coverage (QA)
 
-En este sprint se llevaron a cabo varias implementaciones, la creacion de la vista de favoritos, se crearon diversos servicios, cambios usando los nuevos control flows añadidos en la v17(mejoras en performance). Ademas se añadieron pruebas y se cumplio con un objetivo personal del 80% de code coverage
+En este sprint se llevaron a cabo varias implementaciones: la creación de la vista de favoritos, diversos servicios, y cambios usando los nuevos control flows añadidos en la v17 (mejoras en performance). Además, se añadieron pruebas y se cumplió con un objetivo personal del 80% de code coverage.
 
-## pruebas
+## Pruebas
 ![ng test](public/pruebas.jpg)
 
-## coverage
+## Coverage
 ![code coverage](public/coverage.jpg)
 
-
 ---
-
 
 ## 📝 Sprint Review
 
 ### 🎯 Objetivo del Sprint
-   - Implementacion de funcionalidades asincronas en el proyecto
-   - 50% de testing code coverage
-   - Responsividad
-   - Performance
-   - RXJS
-   - Testing 
+- Implementación de funcionalidades asíncronas en el proyecto
+- 50% de code coverage en testing
+- Responsividad
+- Performance
+- RXJS
+- Testing
 
 ### ✅ Alcance logrado
-- +80% de code coverage general(Statements, Branches etc.).
-- RXJS(servicios y observables para manejar estados y favoritos).  
-- Responsividad y experiencia de usuario al cambiar el enfoque de (nav-bar).
-- Mejora de performance con el uso de nos nuevos control flows(@for, @if). ademas de mejor claridad a la hora de leer codigo.
+- +80% de code coverage general (Statements, Branches, etc.)
+- RXJS (servicios y observables para manejar estados y favoritos)  
+- Responsividad y mejor experiencia de usuario al cambiar el enfoque de la nav-bar
+- Mejora de performance con el uso de los nuevos control flows (`@for`, `@if`), además de mayor claridad a la hora de leer código
 
 ### 🚧 Obstáculos encontrados
-- El no haber empezado con pruebas y desarrollo a la vez dificulto mucho el seguimiento y el cumplir con requerimientos y un codigo de calidad  
+- No haber empezado con pruebas y desarrollo al mismo tiempo dificultó el seguimiento y cumplimiento de requerimientos con código de calidad  
 - Algunos detalles visuales aún deben ajustarse (responsive y consistencia de tarjetas)
 
 ### 🔜 Próximos pasos
-- login con BD
-- Implementacion de la BD 
+- Login con base de datos
+- Implementación de la base de datos
 - Mejorar diseño responsive y agregar animaciones  
 
 ---
@@ -60,22 +58,25 @@ En este sprint se llevaron a cabo varias implementaciones, la creacion de la vis
 ## 🧪 Cómo instalar y correr el proyecto
 
 1. Clona el repositorio:
-```
-git clone https://github.com/tu-usuario/megahub.git
-```
+   ```bash
+   git clone https://github.com/tu-usuario/megahub.git
+   ```
+
 2. Ingresa a la carpeta del proyecto:
-```
-cd  MegaHub
-```
+   ```bash
+   cd MegaHub
+   ```
 
 3. Instala las dependencias:
-```
-npm install
-```
+   ```bash
+   npm install
+   ```
+
 4. Ejecuta el servidor de desarrollo:
-```
-ng serve
-```
+   ```bash
+   ng serve
+   ```
+
 ---
 
 ## 🔐 Credenciales de acceso
@@ -87,7 +88,7 @@ ng serve
 
 ## 🌍 Navegación y funcionalidades principales
 
-- 🧭 Navegación entre secciones: Películas, Series, Favoritos, Configuración(pendiente)
+- 🧭 Navegación entre secciones: Películas, Series, Favoritos, Configuración (pendiente)
 - 🧩 Componentes standalone y reutilizables
 - 📂 Rutas dinámicas con lazy loading (`/detalle/:titulo`)
 - 💾 Visualización de contenido desde JSON local (simulando consumo de API)
@@ -97,7 +98,7 @@ ng serve
 
 ## 📸 Mockups y vistas del proyecto
 
-> A continuación algunas capturas del proyecto en funcionamiento:
+> A continuación, algunas capturas del proyecto en funcionamiento:
 
 ### 📱 Pantalla principal
 ![Pantalla Principal](public/auth.png)
@@ -118,12 +119,12 @@ ng serve
 Por ahora, el contenido de películas y series se carga desde un archivo `peliculas.json` ubicado en `src/assets/data/`.
 
 Formato:
-```
+```json
 {
-"titulo": "Un titulazo",
-"ruta_imagen": "una-increible-imagen.jpg",
-"descripcion": "Pedazo de descripción",
-"tipo": "pelicula"
+  "titulo": "Un titulazo",
+  "ruta_imagen": "una-increible-imagen.jpg",
+  "descripcion": "Pedazo de descripción",
+  "tipo": "pelicula"
 }
 ```
 
@@ -131,33 +132,33 @@ Formato:
 
 ## ✅ Cosas que hice bien
 
-✔️ Entendi un problema la arquitectura de la app, al tener un logica compartida entre home y nav-bar creaba acople y dependencia que generaba conflictos en otras paginas
+✔️ Entendí un problema en la arquitectura de la app: tener lógica compartida entre `home` y `nav-bar` creaba acoplamiento y dependencia que generaba conflictos en otras páginas
 
-✔️ Comprendi el poder de los observables para el compartir info/estados entre componentes de manera escalabe y en tiempo real
+✔️ Comprendí el poder de los observables para compartir info/estados entre componentes de manera escalable y en tiempo real
 
-✔️ Identifique cuando es bueno un obsevable y cuando un simple Service es suficiente(caso de: nav-bar y favorites)
+✔️ Identifiqué cuándo es útil un observable y cuándo un simple service es suficiente (caso de: `nav-bar` y `favorites`)
 
-✔️ Añadir mas contenido y terminar algunas funcionalidades pendientes
+✔️ Añadí más contenido y terminé algunas funcionalidades pendientes
 
 ---
 
 ## ⚠️ Cosas que podrían mejorar
 
-❌ Algunos temas de css y diseño
+❌ Algunos temas de CSS y diseño
 
-❌ una interfaz con mas cosas, tal vez abuso un poco de el minimalismo
+❌ Una interfaz con más elementos; tal vez abusé un poco del minimalismo
 
 ❌ Los alias siguen pendientes :c
 
-❌ Tal vez preparar mi login para en un futuro implementar BD 
+❌ Tal vez preparar mi login para una futura implementación con base de datos
 
 ---
 
 ## 🧠 Aprendizajes clave
 
-- Diferencia entre comunicacion con @Input @Output, Servicios y Observables(Para cuando las cosas se actualizan)
-- Test y code coverage(en funciones, branches,lines etc.).
-- @for, @if @else, @switch, que mejoran en performance, legibilidad y no te obligan a crear templates o cosas raras
+- Diferencias entre comunicación con `@Input`, `@Output`, servicios y observables (para actualizaciones en tiempo real)
+- Testing y code coverage (en funciones, branches, líneas, etc.)
+- Nuevos control flows (`@for`, `@if`, `@else`, `@switch`) que mejoran performance y legibilidad, sin necesidad de templates extraños
 
 ---
 
@@ -167,6 +168,4 @@ Formato:
 - TypeScript  
 - HTML5 + SCSS  
 - Node.js  
-- JSON  
-
----
+- JSON
