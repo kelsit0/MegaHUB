@@ -6,9 +6,44 @@ Durante el desarrollo se incorporan buenas prácticas (si todo sale bien 🙏), 
 
 ---
 
-## 🚀 Sprint 2 - Angular Migration & Componentes
+## 🚀 Sprint 3 - Pruebas y Code Coverage(QA)
 
-En este sprint se llevó a cabo la **migración total del proyecto a Angular 18**, además de la implementación de rutas dinámicas, componentes standalone, y modularización por funcionalidades.
+En este sprint se llevaron a cabo varias implementaciones, la creacion de la vista de favoritos, se crearon diversos servicios, cambios usando los nuevos control flows añadidos en la v17(mejoras en performance). Ademas se añadieron pruebas y se cumplio con un objetivo personal del 80% de code coverage
+
+## pruebas
+![ng test](public/pruebas.jpg)
+
+## coverage
+![code coverage](public/coverage.jpg)
+
+
+---
+
+
+## 📝 Sprint Review
+
+### 🎯 Objetivo del Sprint
+   - Implementacion de funcionalidades asincronas en el proyecto
+   - 50% de testing code coverage
+   - Responsividad
+   - Performance
+   - RXJS
+   - Testing 
+
+### ✅ Alcance logrado
+- +80% de code coverage general(Statements, Branches etc.).
+- RXJS(servicios y observables para manejar estados y favoritos).  
+- Responsividad y experiencia de usuario al cambiar el enfoque de (nav-bar).
+- Mejora de performance con el uso de nos nuevos control flows(@for, @if). ademas de mejor claridad a la hora de leer codigo.
+
+### 🚧 Obstáculos encontrados
+- El no haber empezado con pruebas y desarrollo a la vez dificulto mucho el seguimiento y el cumplir con requerimientos y un codigo de calidad  
+- Algunos detalles visuales aún deben ajustarse (responsive y consistencia de tarjetas)
+
+### 🔜 Próximos pasos
+- login con BD
+- Implementacion de la BD 
+- Mejorar diseño responsive y agregar animaciones  
 
 ---
 
@@ -52,7 +87,7 @@ ng serve
 
 ## 🌍 Navegación y funcionalidades principales
 
-- 🧭 Navegación entre secciones: Películas, Series, Favoritos, Configuración
+- 🧭 Navegación entre secciones: Películas, Series, Favoritos, Configuración(pendiente)
 - 🧩 Componentes standalone y reutilizables
 - 📂 Rutas dinámicas con lazy loading (`/detalle/:titulo`)
 - 💾 Visualización de contenido desde JSON local (simulando consumo de API)
@@ -74,7 +109,7 @@ ng serve
 ![Detalle Contenido](public/details.png)
 
 ### ⭐ Favoritos
-![Favoritos](assets/favoritos.png)
+![Favoritos](public/favoritos.jpg)
 
 ---
 
@@ -96,31 +131,33 @@ Formato:
 
 ## ✅ Cosas que hice bien
 
-✔️ Migración completa y correcta a Angular 18  
-✔️ Uso de lazy loading en rutas principales  
-✔️ Implementación de componentes reutilizables  
-✔️ Estructura modular por funcionalidad  
-✔️ JSON como fuente de datos simulada  
-✔️ Diseño decente y coherente visualmente  
-✔️ Buen aprendizaje de routing y módulos standalone  
+✔️ Entendi un problema la arquitectura de la app, al tener un logica compartida entre home y nav-bar creaba acople y dependencia que generaba conflictos en otras paginas
+
+✔️ Comprendi el poder de los observables para el compartir info/estados entre componentes de manera escalabe y en tiempo real
+
+✔️ Identifique cuando es bueno un obsevable y cuando un simple Service es suficiente(caso de: nav-bar y favorites)
+
+✔️ Añadir mas contenido y terminar algunas funcionalidades pendientes
 
 ---
 
 ## ⚠️ Cosas que podrían mejorar
 
-❌ Al principio combiné módulos clásicos con standalone y me confundía un poco  
-❌ Detalles en el diseño responsive  
-❌ Tamaño inconsistente en los cards (a revisar)    
+❌ Algunos temas de css y diseño
+
+❌ una interfaz con mas cosas, tal vez abuso un poco de el minimalismo
+
+❌ Los alias siguen pendientes :c
+
+❌ Tal vez preparar mi login para en un futuro implementar BD 
 
 ---
 
 ## 🧠 Aprendizajes clave
 
-- Diferencias entre módulos tradicionales y standalone  
-- Implementación de rutas dinámicas con parámetros  
-- Cómo estructurar un proyecto Angular desde cero con buenas prácticas  
-- Renderizado de contenido dinámico a partir de un archivo JSON  
-- Comunicación entre componentes y diseño escalable  
+- Diferencia entre comunicacion con @Input @Output, Servicios y Observables(Para cuando las cosas se actualizan)
+- Test y code coverage(en funciones, branches,lines etc.).
+- @for, @if @else, @switch, que mejoran en performance, legibilidad y no te obligan a crear templates o cosas raras
 
 ---
 
@@ -133,26 +170,3 @@ Formato:
 - JSON  
 
 ---
-
-## 📝 Sprint Review
-
-### 🎯 Objetivo del Sprint
-Realizar la migración completa del proyecto a Angular 18, mejorar la arquitectura modular, crear vistas nuevas con navegación y cargar datos dinámicamente desde una fuente externa.
-
-### ✅ Alcance logrado
-- Migración exitosa a Angular 18  
-- Nuevas rutas y módulos estructurados por funcionalidades  
-- JSON funcionando como fuente de datos simulada  
-- Mockups implementados en vistas funcionales  
-- Interacción de detalle por título y login simulado
-
-### 🚧 Obstáculos encontrados
-- El uso combinado de módulos tradicionales y standalone generó algo de confusión  
-- Algunos detalles visuales aún deben ajustarse (responsive y consistencia de tarjetas)  
-- Falta de persistencia real (por ejemplo, en favoritos)  
-- Tiempos justos para aplicar mejoras adicionales como tests o animaciones  
-
-### 🔜 Próximos pasos
-- Agregar backend (ASP.NET) 
-- Implementar sistema de login real con JWT   
-- Mejorar diseño responsive y agregar animaciones  
