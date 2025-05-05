@@ -3,12 +3,13 @@ import { FavoritesService } from '../../../../services/favorites.service';
 import { ContentModel } from '../../../../core/models/content.model';
 import { ContentListComponent } from '../../../../shared/components/content-list/content-list.component';
 import { Router } from '@angular/router';
+import { NavBarComponent } from '../../../../shared/components/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-favorites-page',
   imports: [
-    ContentListComponent
-  ],
+    ContentListComponent,
+],
   templateUrl: './favorites-page.component.html',
   styleUrl: './favorites-page.component.scss'
 })

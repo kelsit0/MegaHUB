@@ -4,12 +4,12 @@ import { ContentListComponent } from '../../../../shared/components/content-list
 import dataRaw from '../../../../data/movies.json';
 import { ContentModel } from '../../../../core/models/content.model';
 import { RouterOutlet } from '@angular/router';
+import { ContentFilterService } from '../../../../services/content-filter.service';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
   imports: [
-    NavBarComponent,  
     ContentListComponent,
     RouterOutlet
   ],
@@ -21,9 +21,16 @@ export class HomePageComponent implements OnInit {
   public filteredContents: ContentModel[] = [];
   public tipoSeleccionado: 'pelicula' | 'serie' = 'pelicula';
 
+  constructor(private filterService:ContentFilterService){
+
+  }
+
   ngOnInit(): void {
     this.allContents = dataRaw as ContentModel[];
-    this.filtrarContenido();
+    this.filterService.tipoSeleccionado$.subscribe((tipo) => {
+      this.tipoSeleccionado = tipo;
+      this.filtrarContenido();
+    });
   }
 
   cambiarTipo(tipo: 'pelicula' | 'serie') {

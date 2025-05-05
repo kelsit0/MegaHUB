@@ -17,6 +17,8 @@ export class NavBarComponent {
   }
   seleccionar(tipo: 'pelicula' | 'serie') {
     this.tipoSeleccionado.emit(tipo);
+    this.router.navigate(['/home']);
+
   }
 
   verFav():void{
