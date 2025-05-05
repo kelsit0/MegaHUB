@@ -45,6 +45,8 @@ describe('ContentDetailComponent', () => {
     expect(component.content?.titulo).toBe('La Casa de Papel');
   });
 
+
+
   it('debería renderizar los datos en el template', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h2')?.textContent).toContain('La Casa de Papel');
@@ -56,4 +58,10 @@ describe('ContentDetailComponent', () => {
     component.volver();
     expect(mockLocation.back).toHaveBeenCalledWith();
   });
-});
+
+  
+
+}
+
+);
+
