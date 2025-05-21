@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaAPI", "MegaAPI\MegaAPI.csproj", "{2D4613CD-12E8-4C7E-99E3-A77E03B981E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D4613CD-12E8-4C7E-99E3-A77E03B981E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4613CD-12E8-4C7E-99E3-A77E03B981E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4613CD-12E8-4C7E-99E3-A77E03B981E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4613CD-12E8-4C7E-99E3-A77E03B981E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B379C0A6-4EFB-41F4-BBAE-CE15CC6D0CCB}
+	EndGlobalSection
+EndGlobal

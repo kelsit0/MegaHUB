@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "OrkpjzI/ADR93gJkc167x9n+yaaIwKDfO5o4DO/D5Cc=",
+  "Source": "MegaAPI",
+  "BasePath": "_content/MegaAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

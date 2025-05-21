@@ -1,0 +1,48 @@
+
+CREATE DATABASE bd_mega_hub;
+GO
+
+CREATE TABLE Content (
+    id INT PRIMARY KEY IDENTITY,
+    name VARCHAR(100) NOT NULL,
+    description VARCHAR(255),
+    image_path VARCHAR(255),
+    type VARCHAR(50) CHECK (type IN ('pelicula', 'serie')) 
+);
+CREATE TABLE [User] (
+    id INT PRIMARY KEY IDENTITY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL, 
+    created_at DATETIME DEFAULT GETDATE()
+);
+
+insert into [User] (username, email, password_hash)  values  ('admin', 'admin@gmail.com', '1234')  ;
+
+
+CREATE TABLE Favorite (
+    user_id INT,
+    content_id INT,
+    PRIMARY KEY (user_id, content_id),
+    FOREIGN KEY (user_id) REFERENCES [User](id) ON DELETE CASCADE,
+    FOREIGN KEY (content_id) REFERENCES Content(id) ON DELETE CASCADE
+);
+
+
+
+SELECT * FROM Content
+SELECT * FROM [User]
+
+INSERT INTO Content (name, description, image_path, type) VALUES
+('Interestellar', 'Viaje espacial para salvar la Tierra', 'interestellar.webp', 'pelicula'),
+('Dark', 'Viajes en el tiempo y misterio', 'dark.webp', 'serie'),
+('Godzilla', 'Lagarto maniako a la orden pal desorden', 'gozilla.webp', 'pelicula'),
+('Stranger Things', 'Misterios en Hawkins', 'strangerthings.webp', 'serie'),
+('The Batman', 'Un nuevo caballero oscuro se enfrenta a Enigma en Gotham', 'batman.webp', 'pelicula'),
+('Breaking Bad', 'Profesor de química se vuelve narcotraficante', 'breakingbad.webp', 'serie'),
+('Avatar: El Camino del Agua', 'Los Na''vi exploran nuevos territorios y enfrentan amenazas humanas', 'avatar2.webp', 'pelicula'),
+('The Witcher', 'Cazador de monstruos en un mundo lleno de magia y guerra', 'witcher.webp', 'serie'),
+('El Irlandés', 'Un asesino a sueldo recuerda su pasado en la mafia', 'irishman.webp', 'pelicula'),
+('La Casa de Papel', 'Un grupo de ladrones planea el atraco perfecto en la Fábrica de Moneda', 'lacasadepapel.webp', 'serie'),
+('Oppenheimer', 'La historia detrás del desarrollo de la bomba atómica', 'oppenheimer.webp', 'pelicula'),
+('The Mandalorian', 'Un cazarrecompensas en el universo de Star Wars cuida a Grogu', 'mandalorian.webp', 'serie');

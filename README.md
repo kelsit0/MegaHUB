@@ -6,9 +6,9 @@ Durante el desarrollo se incorporan buenas prácticas (si todo sale bien 🙏), 
 
 ---
 
-## 🚀 Sprint 3 - Pruebas y Code Coverage (QA)
+## 🚀 Sprint 4 - Login con Base de datos
 
-En este sprint se llevaron a cabo varias implementaciones: la creación de la vista de favoritos, diversos servicios, y cambios usando los nuevos control flows añadidos en la v17 (mejoras en performance). Además, se añadieron pruebas y se cumplió con un objetivo personal del 80% de code coverage.
+En este sprint se elaboro la API en ASP.NET, ademas se establecio una conexion con SQL SERVER y para terminar logramos hacer funcionar el login de nuestro proyecto de MegaHUB con la API/BD cumpliendo el requisito principal de este sprint
 
 ## Pruebas
 ![ng test](public/pruebas.jpg)
@@ -21,28 +21,26 @@ En este sprint se llevaron a cabo varias implementaciones: la creación de la vi
 ## 📝 Sprint Review
 
 ### 🎯 Objetivo del Sprint
-- Implementación de funcionalidades asíncronas en el proyecto
-- 50% de code coverage en testing
-- Responsividad
-- Performance
-- RXJS
-- Testing
+- Implementacion de Login con Base de datos
+- sql server
+- Lazy Loading
 
 ### ✅ Alcance logrado
-- +80% de code coverage general (Statements, Branches, etc.)
-- RXJS (servicios y observables para manejar estados y favoritos)  
-- Responsividad y mejor experiencia de usuario al cambiar el enfoque de la nav-bar
-- Mejora de performance con el uso de los nuevos control flows (`@for`, `@if`), además de mayor claridad a la hora de leer código
+- Implemente un login a traves de la base de datos(con ASP.NET)
+- Lazy Loading(desde el inicio del proyecto vengo manejandolo) 
+
 
 ### 🚧 Obstáculos encontrados
-- No haber empezado con pruebas y desarrollo al mismo tiempo dificultó el seguimiento y cumplimiento de requerimientos con código de calidad  
-- Algunos detalles visuales aún deben ajustarse (responsive y consistencia de tarjetas)
+- No saber como consumir una base de datos con angular asecas  
+- Problema de Perfiles en launchSettings.json
 
 ### 🔜 Próximos pasos
-- Login con base de datos
-- Implementación de la base de datos
-- Mejorar diseño responsive y agregar animaciones  
-
+- Funcionalidades CRUD con API y BD
+- Capa de Repositorio
+- Mejoras de diseño
+- Ampliacion del proyecto en general
+- DTOs
+- JWT
 ---
 
 ## 🔍 ¿Qué vas a encontrar?
@@ -76,6 +74,14 @@ En este sprint se llevaron a cabo varias implementaciones: la creación de la vi
    ```bash
    ng serve
    ```
+5. Corre el servidor de la API:
+   ```bash
+   dotnet run
+   ```
+   #### Nota: 
+   Dentro de src/app/data/query.txt se encuentran los comandos para la creacion de la Bd.
+
+
 
 ---
 
@@ -106,11 +112,14 @@ En este sprint se llevaron a cabo varias implementaciones: la creación de la vi
 ### 🎞️ Vista de Películas
 ![Vista Películas](public/list.png)
 
+### 🎞️ Vista de Series
+![Vista Series](public/series.png)
+
 ### 📄 Detalle de Contenido
 ![Detalle Contenido](public/details.png)
 
 ### ⭐ Favoritos
-![Favoritos](public/favoritos.jpg)
+![Favoritos](public/favoritos.png)
 
 ---
 
@@ -132,33 +141,34 @@ Formato:
 
 ## ✅ Cosas que hice bien
 
-✔️ Entendí un problema en la arquitectura de la app: tener lógica compartida entre `home` y `nav-bar` creaba acoplamiento y dependencia que generaba conflictos en otras páginas
+✔️ Desarrole la API en asp.net
 
-✔️ Comprendí el poder de los observables para compartir info/estados entre componentes de manera escalable y en tiempo real
+✔️ Hice la conexion con SQL-server
 
-✔️ Identifiqué cuándo es útil un observable y cuándo un simple service es suficiente (caso de: `nav-bar` y `favorites`)
+✔️ Añadi una capa de servicios para la logica de negocio a futuro, y tengo planeado hacer un proyecto por capaz, para la separacion de responsabilidades
 
-✔️ Añadí más contenido y terminé algunas funcionalidades pendientes
+✔️ Use Interfaces, para desacoplar la depencia entre capaz y a futuro poder implementar testing
 
 ---
 
 ## ⚠️ Cosas que podrían mejorar
 
-❌ Algunos temas de CSS y diseño
+❌ Añadir un repositorio
 
-❌ Una interfaz con más elementos; tal vez abusé un poco del minimalismo
+❌  DTOs
 
-❌ Los alias siguen pendientes :c
+❌ Algunas inconsistencias de diseño
 
-❌ Tal vez preparar mi login para una futura implementación con base de datos
+❌ Dockerizar el proyecto, con contenedores para cada servicio
 
 ---
 
 ## 🧠 Aprendizajes clave
 
-- Diferencias entre comunicación con `@Input`, `@Output`, servicios y observables (para actualizaciones en tiempo real)
-- Testing y code coverage (en funciones, branches, líneas, etc.)
-- Nuevos control flows (`@for`, `@if`, `@else`, `@switch`) que mejoran performance y legibilidad, sin necesidad de templates extraños
+- ASP.NET
+- Depency Injection
+- PIPELINE
+- SQL-server/Transact
 
 ---
 
@@ -169,3 +179,6 @@ Formato:
 - HTML5 + SCSS  
 - Node.js  
 - JSON
+- C#
+- SQL-SERVER
+- ASP.NET
