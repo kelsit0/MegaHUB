@@ -1,7 +1,12 @@
 <div class="content-card">
-  <img class="card-img" [src]="content.ruta_imagen" [alt]="content.titulo" />
-  <h3>{{ content.titulo }}</h3>
-  <p>{{ content.descripcion }}</p>
+  <div class="card-img-wrapper">
+    <img class="card-img" [src]="content.ruta_imagen" [alt]="content.titulo" />
+  </div>
+
+  <div class="card-content">
+    <h3>{{ content.titulo }}</h3>
+    <p>{{ content.descripcion }}</p>
+  </div>
 
   <div class="card-buttons">
     <button (click)="verDetalles()">Ver más</button>

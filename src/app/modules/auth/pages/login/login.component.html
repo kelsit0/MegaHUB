@@ -6,7 +6,12 @@
         <input type="text" [(ngModel)]="username" placeholder="Usuario" />
         <input type="password" [(ngModel)]="password" placeholder="Contraseña" />
         <button (click)="login()">Ingresar</button>
-        <p class="error-msg" *ngIf="errorMsg">{{ errorMsg }}</p>
+
+        @if (errorMsg) {
+          <p class="error-msg">{{ errorMsg }}</p>
+        }
+
+
       </div>
     </div>
   </div>

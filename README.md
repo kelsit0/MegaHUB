@@ -2,183 +2,172 @@
 
 Bienvenido a **MegaHUB**, el mejor proyecto de plataforma de entretenimiento 100% original (NO copia 😎). Pensada como una plataforma tipo streaming, donde podrás explorar contenido multimedia como **películas**, **series**, marcar favoritos y, próximamente, configurar tu perfil.
 
-Durante el desarrollo se incorporan buenas prácticas (si todo sale bien 🙏), modularización del código, componentes reutilizables y arquitectura escalable en Angular 18.
+---
+
+## 1. 📌 Título, descripción y objetivo
+
+**MegaHUB** es una aplicación web construida con Angular 18 y una API en ASP.NET Core (.NET 8), conectada a una base de datos SQL Server. Su objetivo es ofrecer una plataforma tipo streaming con funcionalidades de login, visualización de contenido y una arquitectura pensada para escalar.
 
 ---
 
-## 🚀 Sprint 4 - Login con Base de datos
+## 2. 👤 Nombre
 
-En este sprint se elaboro la API en ASP.NET, ademas se establecio una conexion con SQL SERVER y para terminar logramos hacer funcionar el login de nuestro proyecto de MegaHUB con la API/BD cumpliendo el requisito principal de este sprint
-
-## Pruebas
-![ng test](public/pruebas.jpg)
-
-## Coverage
-![code coverage](public/coverage.jpg)
+Realizado por: [Oscar Emilio Ramos Reynaga]
 
 ---
 
-## 📝 Sprint Review
-
-### 🎯 Objetivo del Sprint
-- Implementacion de Login con Base de datos
-- sql server
-- Lazy Loading
-
-### ✅ Alcance logrado
-- Implemente un login a traves de la base de datos(con ASP.NET)
-- Lazy Loading(desde el inicio del proyecto vengo manejandolo) 
+## 3. 🧱 Mockup inicial
 
 
-### 🚧 Obstáculos encontrados
-- No saber como consumir una base de datos con angular asecas  
-- Problema de Perfiles en launchSettings.json
+| Pantalla Principal | Vista Películas | Vista Series |
+|--------------------|------------------|---------------|
+| ![auth](public/auth.png) | ![list](public/list.png) | ![series](public/series.png) |
 
-### 🔜 Próximos pasos
-- Funcionalidades CRUD con API y BD
-- Capa de Repositorio
-- Mejoras de diseño
-- Ampliacion del proyecto en general
-- DTOs
-- JWT
----
-
-## 🔍 ¿Qué vas a encontrar?
-
-- 🟢 Login funcional con credenciales válidas (`admin` / `1234`)
-- 🧭 Navegación fluida entre diferentes interfaces
-- 🧩 Componentes reutilizables
-- 🌐 Rutas dinámicas con parámetros
-- 🧼 Y un código que *esperemos* no te sangre los ojos 😅
+| Detalle | Favoritos |
+|---------|-----------|
+| ![details](public/details.png) | ![favoritos](public/favoritos.png) |
 
 ---
 
-## 🧪 Cómo instalar y correr el proyecto
+## 4. 🖼️ Capturas del proyecto
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/megahub.git
-   ```
+| Pantalla Principal | Vista Películas | Vista Series |
+|--------------------|------------------|---------------|
+| ![auth](public/auth.png) | ![list](public/list.png) | ![series](public/series.png) |
 
-2. Ingresa a la carpeta del proyecto:
-   ```bash
-   cd MegaHub
-   ```
-
-3. Instala las dependencias:
-   ```bash
-   npm install
-   ```
-
-4. Ejecuta el servidor de desarrollo:
-   ```bash
-   ng serve
-   ```
-5. Corre el servidor de la API:
-   ```bash
-   dotnet run
-   ```
-   #### Nota: 
-   Dentro de src/app/data/query.txt se encuentran los comandos para la creacion de la Bd.
-
-
+| Detalle | Favoritos |
+|---------|-----------|
+| ![details](public/details.png) | ![favoritos](public/favoritos.png) |
 
 ---
 
-## 🔐 Credenciales de acceso
+## 5. 📦 Instrucciones de instalación
 
-- **Usuario:** `admin`  
-- **Contraseña:** `1234`
-
----
-
-## 🌍 Navegación y funcionalidades principales
-
-- 🧭 Navegación entre secciones: Películas, Series, Favoritos, Configuración (pendiente)
-- 🧩 Componentes standalone y reutilizables
-- 📂 Rutas dinámicas con lazy loading (`/detalle/:titulo`)
-- 💾 Visualización de contenido desde JSON local (simulando consumo de API)
-- 🎯 Composición modular de vistas
-
----
-
-## 📸 Mockups y vistas del proyecto
-
-> A continuación, algunas capturas del proyecto en funcionamiento:
-
-### 📱 Pantalla principal
-![Pantalla Principal](public/auth.png)
-
-### 🎞️ Vista de Películas
-![Vista Películas](public/list.png)
-
-### 🎞️ Vista de Series
-![Vista Series](public/series.png)
-
-### 📄 Detalle de Contenido
-![Detalle Contenido](public/details.png)
-
-### ⭐ Favoritos
-![Favoritos](public/favoritos.png)
-
----
-
-## 📁 Contenido JSON simulado
-
-Por ahora, el contenido de películas y series se carga desde un archivo `peliculas.json` ubicado en `src/assets/data/`.
-
-Formato:
-```json
-{
-  "titulo": "Un titulazo",
-  "ruta_imagen": "una-increible-imagen.jpg",
-  "descripcion": "Pedazo de descripción",
-  "tipo": "pelicula"
-}
+### Frontend
+```bash
+git clone https://github.com/tu-usuario/megahub.git
+cd MegaHub
+npm install
+ng serve
 ```
 
+### Backend (.NET API)
+```bash
+cd backend/MegaHubApi
+dotnet run
+```
+📝 Nota: Los scripts de creación de la base de datos se encuentran en src/app/data/query.txt.
+
+
+
+## 6. 📚 Dependencias y librerías (.NET API)
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.SqlServer
+- Microsoft.AspNetCore.Cors
+- Microsoft.AspNetCore.Authentication.JwtBearer
+- Swashbuckle.AspNetCore (Swagger)
+- Pomelo.EntityFrameworkCore.MySql (opcional para MySQL)
+
+## 7. 🔧 Descripción
+Web API en ASP.NET Core que conecta con SQL Server usando Entity Framework Core. Estructura por capas:
+- Controllers
+- Services 
+- Models
+
+Features implementados:
+- ✅ Login funcional
+- ✅ Manejo de CORS
+- ✅ Swagger para documentación
+- ✅ Separación de responsabilidades
+- ✅ Inyección de dependencias
+
+Por ultimo mencionar que se hizo una conexion con el proyecto de Angular usando las librerias de HTTP de angular
+
+## 8. 📈 Reporte de Code Coverage
+### Pruebas
+![ng test](public/pruebas.jpg)
+
+### Coverage
+![code coverage](public/coverage.jpg)
+
+## 9. 🧠 Diagrama Entidad-Relación
+```sql
+-- Ejemplo (actualizar con tu esquema real)
+CREATE TABLE Usuarios (
+    Id INT PRIMARY KEY IDENTITY,
+    Email NVARCHAR(100) UNIQUE NOT NULL,
+    PasswordHash VARBINARY(MAX) NOT NULL
+);
+
+CREATE TABLE Contenido (
+    Id INT PRIMARY KEY IDENTITY,
+    Titulo NVARCHAR(100) NOT NULL,
+    Descripcion TEXT,
+    Tipo NVARCHAR(20) -- 'pelicula'/'serie'
+);
+```
+
+
+## 10. 🔮 Posibles mejoras
+- Implementar DTOs
+- Añadir capa de repositorio
+- Dockerizar (API + Frontend)
+- Roles de usuario
+- Sistema de favoritos persistente
+
+## 11. 📘 Documentación API (Swagger)
+Disponible en: `https://localhost:7118/swagger/index.html`
+
+**Endpoints principales:**
+### - Content
+- `GET  /api/content`
 ---
+### - User
 
-## ✅ Cosas que hice bien
+- `POST /api/user`
 
-✔️ Desarrole la API en asp.net
+## - Captura de pantalla
+![swagger](public/swagger.png)
 
-✔️ Hice la conexion con SQL-server
+## 12. 🧪 Archivos de Configuración
+```
+en progreso
+```
 
-✔️ Añadi una capa de servicios para la logica de negocio a futuro, y tengo planeado hacer un proyecto por capaz, para la separacion de responsabilidades
+## ⚠️ Problemas Conocidos
+- Docker no implementado
+- Algunas rutas estáticas
+- Validación de formularios pendiente
 
-✔️ Use Interfaces, para desacoplar la depencia entre capaz y a futuro poder implementar testing
+## 🔄 Retrospectiva
+### ✅ Qué hice bien
+- API funcional en ASP.NET Core
+- Conexión estable con SQL Server
+- Arquitectura por capas
+- Inyección de dependencias
+- Conexion de API con Angular
+- Mejore las inconsistencias de Cards y Login
 
----
+### ⚠️ ¿Qué no salio bien?
+- Implementar repositorio
+- Adoptar DTOs
+- Dockerizar servicios
+- Mejorar documentación de API y completar endpoints
 
-## ⚠️ Cosas que podrían mejorar
+### 🔁 ¿Que puedo hacer diferente?
+- Empezar con Unit Testing
+- Documentar arquitectura primero
+- Usar contenedores desde inicio
+- Considerar Clean Architecture
 
-❌ Añadir un repositorio
+## 🔐 Credenciales de Prueba
+- Usuario: admin
+- Contraseña: 1234
 
-❌  DTOs
-
-❌ Algunas inconsistencias de diseño
-
-❌ Dockerizar el proyecto, con contenedores para cada servicio
-
----
-
-## 🧠 Aprendizajes clave
-
-- ASP.NET
-- Depency Injection
-- PIPELINE
-- SQL-server/Transact
-
----
-
-## ⚙️ Tecnologías utilizadas
-
-- Angular 18  
+## 🌐 Tecnologías
+- Angular 18
 - TypeScript  
-- HTML5 + SCSS  
-- Node.js  
-- JSON
-- C#
-- SQL-SERVER
-- ASP.NET
+- ASP.NET Core
+- SQL Server / MySQL
+- Swagger
+- Entity Framework Core
