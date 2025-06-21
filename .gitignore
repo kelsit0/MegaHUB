@@ -6,6 +6,9 @@
 /MegaAPI/.vs/
 /MegaAPI/bin/
 /MegaAPI/obj/
+**/.vs/
+**/bin/
+**/obj/
 
 # Archivos de usuario (aplican en cualquier nivel)
 *.user

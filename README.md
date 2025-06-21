@@ -91,21 +91,7 @@ Por ultimo mencionar que se hizo una conexion con el proyecto de Angular usando 
 ![code coverage](public/coverage.jpg)
 
 ## 9. 🧠 Diagrama Entidad-Relación
-```sql
--- Ejemplo (actualizar con tu esquema real)
-CREATE TABLE Usuarios (
-    Id INT PRIMARY KEY IDENTITY,
-    Email NVARCHAR(100) UNIQUE NOT NULL,
-    PasswordHash VARBINARY(MAX) NOT NULL
-);
-
-CREATE TABLE Contenido (
-    Id INT PRIMARY KEY IDENTITY,
-    Titulo NVARCHAR(100) NOT NULL,
-    Descripcion TEXT,
-    Tipo NVARCHAR(20) -- 'pelicula'/'serie'
-);
-```
+![Diagrama](src/app/data/DB_DIAGRAMA.png)
 
 
 ## 10. 🔮 Posibles mejoras
