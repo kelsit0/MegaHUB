@@ -1,5 +1,6 @@
-﻿using MegaAPI.Models;
+using MegaAPI.Models;
 using MegaAPI.Services;
+using MegaAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,15 +12,15 @@ namespace MegaAPI.Controllers
     [ApiController]
     public class ContentController : ControllerBase
     {
-        private readonly ApplicationDbContext _dbContext;
+        private readonly IContentService _service;
 
-        public ContentController(ApplicationDbContext context) {
-            _dbContext = context;
+        public ContentController( IContentService service) {
+            _service = service;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<Content>> getContent() {
-            return Ok(_dbContext.Contents.ToList());
+            return Ok(_service.getAll());
         }
 
     }

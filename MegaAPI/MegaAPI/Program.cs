@@ -1,5 +1,7 @@
 using MegaAPI.Models;
-using MegaAPI.Services;
+using MegaAPI.Repositories.Implementations;
+using MegaAPI.Repositories.Interfaces;
+using MegaAPI.Services.Implementations;
 using MegaAPI.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,8 +15,12 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddScoped<IUserService, UserService>();  ///añadimos la implementacionnnnn
 
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+/// enlazamos con la interfaz y la implementacion para contenido
+builder.Services.AddScoped<IContentRepository, ContentRepository>(); 
+builder.Services.AddScoped<IContentService, ContentService>();  
 
 var origenes = builder.Configuration.GetValue<string>("AllowedHosts")!.Split(",");
 
