@@ -116,35 +116,32 @@ Disponible en: `https://localhost:7118/swagger/index.html`
 ![swagger](public/swagger.png)
 
 ## 12. 🧪 Archivos de Configuración
-```
-en progreso
-```
+
+Se implemento un Dockerfile para el frontend de Angular, y otros dos mas para la API y la BD, en este caso el archivo de Dockerfile se genero en los archivos de la api API 
+
 
 ## ⚠️ Problemas Conocidos
-- Docker no implementado
-- Algunas rutas estáticas
 - Validación de formularios pendiente
+-Extension de metodos de la API
 
 ## 🔄 Retrospectiva
 ### ✅ Qué hice bien
-- API funcional en ASP.NET Core
-- Conexión estable con SQL Server
-- Arquitectura por capas
-- Inyección de dependencias
-- Conexion de API con Angular
-- Mejore las inconsistencias de Cards y Login
+- Mejoras generales en la API
+- Estructura por capas
+- Uso de patron de repositorio para acceso a datos
+- Interfaces para Repositorios y Servicios
+- DTOS de entrada y de salida para control de exposicion de datos
+- Automapper para mapeo de entidades
+- Separacion de responsabilidades en capas
 
 ### ⚠️ ¿Qué no salio bien?
-- Implementar repositorio
-- Adoptar DTOs
-- Dockerizar servicios
+- El docker compose con la api jaja
 - Mejorar documentación de API y completar endpoints
 
 ### 🔁 ¿Que puedo hacer diferente?
-- Empezar con Unit Testing
-- Documentar arquitectura primero
-- Usar contenedores desde inicio
-- Considerar Clean Architecture
+- Implementar JWT
+- Completar cruds y validaciones mas adecuadas
+- middlewares para errores personalizados 
 
 ## 🔐 Credenciales de Prueba
 - Usuario: admin
