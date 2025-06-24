@@ -54,6 +54,30 @@ app.UseCors();
 
 app.UseAuthorization();
 
+// Crear la base de datos automáticamente
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.EnsureCreated();
+}
+
+// Crear usuario admin/1234 si no existe
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    if (!db.Users.Any(u => u.Username == "admin"))
+    {
+        db.Users.Add(new User
+        {
+            Username = "admin",
+            Email = "admin@admin.com",
+            PasswordHash = "1234",
+            CreatedAt = DateTime.UtcNow
+        });
+        db.SaveChanges();
+    }
+}
+
 app.MapControllers();
 
 app.Run();
